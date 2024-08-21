@@ -1,19 +1,8 @@
 import React from "react";
 import { Social } from "@/Information";
-import gsap from "gsap";
 
 
 const contact = () => {
-  // Animate icons on hover other than scale
-  const socialIcon = document.querySelectorAll(".socialIcon");
-  socialIcon.forEach((icon) => {
-    icon.addEventListener("mouseover", () => {
-      gsap.to(icon, { scale: 1.2, duration: 0.5 });
-    });
-    icon.addEventListener("mouseleave", () => {
-      gsap.to(icon, { scale: 1, duration: 0.5 });
-    });
-  });
 
 
   return (

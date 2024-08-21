@@ -38,6 +38,7 @@ body {
   height: 1px;
   background-color: #d6d6d6;
   margin: 1rem 0;
+  display: block;
 }
 
 .name {
@@ -140,6 +141,16 @@ body {
   width: 30px;
   height: 30px;
 }
+
+.socialIcon:hover{
+  transform: scale(1.05);
+}
+
+.socialIcon:active{
+  transform: scale(0.95);
+
+}
+
 
 .skills{
   width: 50%;

@@ -4,7 +4,6 @@ import Homee from "@/components/home";
 import Projects from "@/components/projects";
 import About from "@/components/About";
 import Contact from "@/components/contact";
-import Loader from "@/components/loader";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -17,7 +16,6 @@ gsap.registerPlugin(ScrollToPlugin)
 
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(false);
   }, [100]);
