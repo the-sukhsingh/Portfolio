@@ -16,9 +16,6 @@ gsap.registerPlugin(ScrollToPlugin)
 
 
 export default function Home() {
-  useEffect(() => {
-    setLoading(false);
-  }, [100]);
 
   useGSAP(()=>{
     // Animate about section on scroll trigger
