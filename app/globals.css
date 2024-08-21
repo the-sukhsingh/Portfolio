@@ -24,10 +24,176 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.partition{
+  width: 100%;
+  height: 1px;
+  background-color: #d6d6d6;
+  margin: 1rem 0;
+}
+
+.name {
+  line-height: 1;
+  font-weight: 800;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+
+
+.homee {
+  position: relative;
+  z-index: 0;
+  /* margin: 20px; */
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #1a232a;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: conic-gradient(
+      transparent,
+      rgb(88, 205, 231),
+      transparent 25%
+    );
+    
+    animation: rotate 3s linear infinite,fadein 3s linear forwards 3s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: #000;
+    border-radius: 5px;
+  }
+}
+
+.typing {
+  /* border-right: .15em solid black; */
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+  animation: type 2s steps(50, end), blink 0.5s step-end infinite alternate,
+    fadeIn 5s;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: rgb(253, 253, 253);
+  }
+}
+.para {
+  opacity: 0;
+  animation: fadeIn 5s forwards;
+  animation-delay:1000ms;
+  text-align: center;
+  font-size: 1.2rem;
+  text-align: end;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.socialIcon{
+  width: 30px;
+  height: 30px;
+}
+
+.skills{
+  width: 50%;
+  height: 82%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width:500px) {
+  .skills{
+    width: 100%;
+  }
+}
+.skillLogo{
+  width: 75px;
+  /* height: 75px; */
+  padding: 5px;
+  transition: all 0.5s ease;
+
+}
+.hover-div{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.hover-box,.hover-text {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position the box above the element */
+  /* left: 50%; */
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.hover-div:hover .hover-box {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.mover:hover .hover-text{
+  visibility: visible;
+  opacity: 1;
+}
+
+.abb{
+  overflow-y: auto;
 }
