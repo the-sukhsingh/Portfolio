@@ -13,7 +13,7 @@ import { useRef } from "react";
 
 
 
-const projects = () => {
+const Projects = () => {
   const about = useRef(null);
   const port = Portfolio.map((item) => {
     return item;
@@ -312,4 +312,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default Projects;
