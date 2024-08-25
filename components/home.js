@@ -12,10 +12,9 @@ const Home = () => {
     // Animate home section on scroll trigger
     gsap.fromTo(
       home.current,
-      { opacity: 1, y: 0 },
+      { opacity: 1},
       {
         opacity: 0,
-        y: -50,
         duration: 1,
         scrollTrigger: {
           trigger: home.current,
@@ -36,7 +35,7 @@ const Home = () => {
         <div className="w-full md:w-4/5 lg:w-2/5 h-[90%] md:h-3/4 p-5 md:p-9 flex flex-col gap-3 justify-around">
           <p className="text-xl font-semibold">Full Stack Developer</p>
           <h3 className="text-6xl md:text-[70px] font-bold">Hello I&apos;m</h3>
-          <h2 className="text-[100px] text-[#9eddff] name" id="name">
+          <h2 className="text-[90px] md:text-[100px] text-[#9eddff] name" id="name">
             {siteProps.name}
           </h2>
           <p className="text-xl">

@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const navbar = () => {
   const scrollToSection = (section) => {
-    gsap.to(window, { duration: 1.5, scrollTo: section, ease: "power2.inOut" });
+    gsap.to(window, { duration: 1, scrollTo: section, ease: "power2.out" });
   };
   return (
     <>
@@ -24,18 +24,38 @@ const navbar = () => {
             <li className='hover:text-[#a6a3a3] active:scale-95' onClick={()=>{
               scrollToSection("#contact")
             }}><Link href={"#contact"}>Contact</Link></li> */}
-          <button className='hover:text-[#a6a3a3] active:scale-95' onClick={()=>{
-              scrollToSection("#home")
-            }}>Home</button>
-          <button className='hover:text-[#a6a3a3] active:scale-95' onClick={()=>{
-              scrollToSection("#about")
-            }}>About</button>
-          <button className='hover:text-[#a6a3a3] active:scale-95' onClick={()=>{
-              scrollToSection("#portfolio")
-            }}>Portfolio</button>
-          <button className='hover:text-[#a6a3a3] active:scale-95' onClick={()=>{
-              scrollToSection("#contact")
-            }}>Contact</button>
+          <button
+            className="hover:text-[#a6a3a3] hover:scale-105 active:scale-95"
+            onClick={() => {
+              scrollToSection("#home");
+            }}
+          >
+            Home
+          </button>
+          <button
+            className="hover:text-[#a6a3a3] hover:scale-105 active:scale-95"
+            onClick={() => {
+              scrollToSection("#about");
+            }}
+          >
+            About
+          </button>
+          <button
+            className="hover:text-[#a6a3a3] hover:scale-105 active:scale-95"
+            onClick={() => {
+              scrollToSection("#portfolio");
+            }}
+          >
+            Portfolio
+          </button>
+          <button
+            className="hover:text-[#a6a3a3] hover:scale-105 active:scale-95"
+            onClick={() => {
+              scrollToSection("#contact");
+            }}
+          >
+            Contact
+          </button>
         </ul>
         {/* <div>
             <Link className='text-[20px]' href={"/"}>Create Your Own Portfolio Website</Link>

@@ -15,14 +15,29 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin)
 
 
+// import { Text, Code } from '@mantine/core';
+import { useMouse, useSetState } from '@mantine/hooks';
+
 export default function Home() {
 
-  useGSAP(()=>{
-    // Animate about section on scroll trigger
-    gsap.fromTo("#about", {opacity:0, y:100}, {opacity:1, y:0, duration:2, scrollTrigger:{trigger:"#about", start:"top 80%", end:"top 30%", scrub:1}})
+  const [scrollY, setScrollY] = useState(0);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
 
 
-  })
+
+
+
   return (
     <>
       <div className="w-[99vw] absolute hero">
@@ -45,10 +60,13 @@ export default function Home() {
           <Contact />
         </div>
 
-        {/* Make a move to top button */}
-        <div className="fixed bottom-5 right-5 mover">
-          <a href="#home">
-            <button className="bg-[#2222228b] text-white p-2 rounded-full hover:bg-[#222222]">
+
+
+<div className={`fixed bottom-5 right-5 mover ${scrollY === 0 ? 'hidden' : ''}`}>
+
+            <button className="bg-[#2222228b] text-white p-2 rounded-full hover:bg-[#222222]" onClick={()=>{
+              gsap.to(window, {duration:1, scrollTo:"#home", ease:"expo.inOut"})
+            }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -60,14 +78,15 @@ export default function Home() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M5 10l7-7m0 0l7 7m-7-7v18"
-                />
+                  d="M5 10l7-7m0 0l7 7m-7-7v18" />
+
               </svg>
             </button>
-          </a>
+          </div>
           <div className="hover-text">Move To Top</div>
-        </div>
       </div>
+
+      
     </>
   );
 }

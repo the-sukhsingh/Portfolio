@@ -8,7 +8,7 @@ const contact = () => {
   return (
     <>
       <div className="w-full h-48 flex justify-center items-center flex-col">
-        <div className="flex gap-[2.5rem]">
+        <div className="md:flex gap-[2.5rem] grid grid-cols-3 ">
           {Social.email && (
             <a href={`mailto:${Social.email}`}>
               <img
