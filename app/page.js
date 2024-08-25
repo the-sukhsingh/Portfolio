@@ -276,7 +276,7 @@ export default function Home() {
             <div className="w-[100vw]">
               <MantineProvider>
                 <div
-                  className="w-[100vw] h-[80vh] flex flex-col gap-8 justify-center"
+                  className="w-[100vw] min-h-[80vh] flex flex-col gap-8 justify-center"
                   ref={about}
                 >
                   <div className="w-full text-4xl text-center py-5">
