@@ -11,7 +11,7 @@ const Contact = () => {
           {Social.email && (
             <a href={`mailto:${Social.email}`}>
               <Image
-                src="/mail.svg"
+                src="./mail.svg"
                 alt="email"
                 className="socialIcon"
                 width={30}
@@ -22,7 +22,7 @@ const Contact = () => {
           {Social.github && (
             <a href={`https://github.com/${Social.github}`} target="_blank">
               <Image
-                src="/github.svg"
+                src="./github.svg"
                 alt="GitHub"
                 className="socialIcon"
                 width={30}
@@ -36,7 +36,7 @@ const Contact = () => {
               target="_blank"
             >
               <Image
-                src="/instagram.svg"
+                src="./instagram.svg"
                 alt="Instagram"
                 className="socialIcon"
                 width={30}
@@ -50,7 +50,7 @@ const Contact = () => {
               target="_blank"
             >
               <Image
-                src="/linkedin.svg"
+                src="./linkedin.svg"
                 alt="LinkedIn"
                 className="socialIcon"
                 width={30}
@@ -61,7 +61,7 @@ const Contact = () => {
           {Social.twitter && (
             <a href={`https://twitter.com/${Social.twitter}`} target="_blank">
               <Image
-                src="/twitter.svg"
+                src="./twitter.svg"
                 alt="Twitter"
                 className="socialIcon"
                 width={30}
@@ -75,7 +75,7 @@ const Contact = () => {
               target="_blank"
             >
               <Image
-                src="/youtube.svg"
+                src="./youtube.svg"
                 alt="YouTube"
                 className="socialIcon"
                 width={30}

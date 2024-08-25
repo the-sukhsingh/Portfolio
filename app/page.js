@@ -283,7 +283,7 @@ export default function Home() {
                     Portfolio
                   </div>
 
-                  <div className="w-[100vw]  flex justify-around flex-col md:flex-row flex-wrap gap-2 overflow-hidden ">
+                  <div className="w-[100vw] flex justify-around flex-col md:flex-row flex-wrap gap-2 overflow-x-hidden ">
                     <div className="w-full md:w-1/2 lg:w-[30%]  relative border rounded-lg p-3 leftt">
                       <div className="absolute top-2 right-2 z-10 bg-black p-2 rounded-xl cursor-pointer">
                         <Image
