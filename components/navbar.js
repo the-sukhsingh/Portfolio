@@ -10,7 +10,7 @@ const navbar = () => {
   };
   return (
     <>
-      <nav className="w-[100vw] flex justify-around items-center h-12 bg-[#222222a6]">
+      <nav className="w-full flex justify-around items-center h-12 bg-[#222222a6]">
         <ul className="flex gap-5 text-[16px]">
           {/* <li className='hover:text-[#a6a3a3] active:scale-95' onClick={()=>{
               scrollToSection("#home")

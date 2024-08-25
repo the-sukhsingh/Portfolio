@@ -30,9 +30,6 @@ export const skills = {
         postman:true,
         tailwind:true,
         materialui:true,
-        postman:true,
-        tailwind:true,
-        materialui:true,
 
     }
 }

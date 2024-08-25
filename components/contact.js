@@ -1,29 +1,32 @@
 import React from "react";
 import { Social } from "@/Information";
+import Image from "next/image";
 
 
-const contact = () => {
-
-
+const Contact = () => {
   return (
     <>
       <div className="w-full h-48 flex justify-center items-center flex-col">
         <div className="md:flex gap-[2.5rem] grid grid-cols-3 ">
           {Social.email && (
             <a href={`mailto:${Social.email}`}>
-              <img
-                src="mail.svg"
+              <Image
+                src="/mail.svg"
                 alt="email"
                 className="socialIcon"
+                width={30}
+                height={30}
               />
             </a>
           )}
           {Social.github && (
             <a href={`https://github.com/${Social.github}`} target="_blank">
-              <img
-                src="github.svg"
+              <Image
+                src="/github.svg"
                 alt="GitHub"
                 className="socialIcon"
+                width={30}
+                height={30}
               />
             </a>
           )}
@@ -32,10 +35,12 @@ const contact = () => {
               href={`https://www.instagram.com/${Social.instagram}`}
               target="_blank"
             >
-              <img
-                src="instagram.svg"
+              <Image
+                src="/instagram.svg"
                 alt="Instagram"
                 className="socialIcon"
+                width={30}
+                height={30}
               />
             </a>
           )}
@@ -44,19 +49,23 @@ const contact = () => {
               href={`https://www.linkedin.com/in/${Social.linkedin}`}
               target="_blank"
             >
-              <img
-                src="linkedin.svg"
+              <Image
+                src="/linkedin.svg"
                 alt="LinkedIn"
                 className="socialIcon"
+                width={30}
+                height={30}
               />
             </a>
           )}
           {Social.twitter && (
             <a href={`https://twitter.com/${Social.twitter}`} target="_blank">
-              <img
-                src="twitter.svg"
+              <Image
+                src="/twitter.svg"
                 alt="Twitter"
                 className="socialIcon"
+                width={30}
+                height={30}
               />
             </a>
           )}
@@ -65,10 +74,12 @@ const contact = () => {
               href={`https://www.youtube.com/@${Social.youtube}`}
               target="_blank"
             >
-              <img
-                src="youtube.svg"
+              <Image
+                src="/youtube.svg"
                 alt="YouTube"
                 className="socialIcon"
+                width={30}
+                height={30}
               />
             </a>
           )}
@@ -78,4 +89,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;
