@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { Portfolio } from "@/Information";
 import { Rethink_Sans } from "next/font/google";
