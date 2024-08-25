@@ -202,16 +202,16 @@ export default function Home() {
                 </p>
                 <div className="flex gap-5">
                   <a href={"https://github.com/" + Social.github}>
-                    <Image src="/github.svg" alt="" width={45} height={45} />
+                    <Image src="./github.svg" alt="" width={45} height={45} />
                   </a>
                   <a href={"https://linkedin.com/in/" + Social.linkedin}>
-                    <Image src="/linkedin.svg" alt="" width={45} height={45} />
+                    <Image src="./linkedin.svg" alt="" width={45} height={45} />
                   </a>
                 </div>
               </div>
               <div className="w-2/5 hidden lg:block photo">
                 <Image
-                  src="/icon.jpeg"
+                  src="./icon.jpeg"
                   alt="A sikh guy coding"
                   className="cover"
                   width={600}
@@ -287,7 +287,7 @@ export default function Home() {
                     <div className="w-full md:w-1/2 lg:w-[30%]  relative border rounded-lg p-3 leftt">
                       <div className="absolute top-2 right-2 z-10 bg-black p-2 rounded-xl cursor-pointer">
                         <Image
-                          src="/share.svg"
+                          src="./share.svg"
                           width={30}
                           height={30}
                           alt="Share"
@@ -301,7 +301,7 @@ export default function Home() {
                           }}
                         />
                         <Image
-                          src="/github.svg"
+                          src="./github.svg"
                           width={30}
                           height={30}
                           className="hover:scale-105 active:scale-95"
@@ -317,7 +317,7 @@ export default function Home() {
                       <Carousel withIndicators loop>
                         <CarouselSlide>
                           <Image
-                            src="/projects/todo/todo-web.jpeg"
+                            src="./projects/todo/todo-web.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -331,7 +331,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="/projects/todo/todo-mobile.jpeg"
+                            src="./projects/todo/todo-mobile.jpeg"
                             width={100}
                             height={200}
                             alt=""
@@ -350,7 +350,7 @@ export default function Home() {
                     <div className="w-full md:w-1/2 lg:w-[30%]  relative border rounded-lg p-3 midd">
                       <div className="absolute top-2 right-2 z-10 bg-black p-2 rounded-xl cursor-pointer">
                         <Image
-                          src="/share.svg"
+                          src="./share.svg"
                           width={30}
                           height={30}
                           alt="Share"
@@ -363,7 +363,7 @@ export default function Home() {
                           }}
                         />
                         <Image
-                          src="/github.svg"
+                          src="./github.svg"
                           width={30}
                           height={30}
                           alt="Github"
@@ -379,7 +379,7 @@ export default function Home() {
                       <Carousel withIndicators loop>
                         <CarouselSlide>
                           <Image
-                            src="/projects/passop/passop-web.jpeg"
+                            src="./projects/passop/passop-web.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -393,7 +393,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="/projects/passop/passop-mobile.jpeg"
+                            src="./projects/passop/passop-mobile.jpeg"
                             width={100}
                             height={200}
                             alt=""
@@ -412,7 +412,7 @@ export default function Home() {
                     <div className="w-full md:w-1/2 lg:w-[30%]  relative border rounded-lg p-3 rightt">
                       <div className="absolute top-2 right-2 z-10 bg-black p-2 rounded-xl cursor-pointer">
                         <Image
-                          src="/share.svg"
+                          src="./share.svg"
                           width={30}
                           height={30}
                           className="hover:scale-105 active:scale-95"
@@ -426,7 +426,7 @@ export default function Home() {
                           }}
                         />
                         <Image
-                          src="/github.svg"
+                          src="./github.svg"
                           width={30}
                           height={30}
                           alt="Github"
@@ -442,7 +442,7 @@ export default function Home() {
                       <Carousel withIndicators loop>
                         <CarouselSlide>
                           <Image
-                            src="/projects/gamehub/gamehub-home.jpeg"
+                            src="./projects/gamehub/gamehub-home.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -456,7 +456,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="/projects/gamehub/tic-light.jpeg"
+                            src="./projects/gamehub/tic-light.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -469,7 +469,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="/projects/gamehub/tic-dark.jpeg"
+                            src="./projects/gamehub/tic-dark.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -482,7 +482,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="/projects/gamehub/bingo-light.jpeg"
+                            src="./projects/gamehub/bingo-light.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -495,7 +495,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="/projects/gamehub/bingo-dark.jpeg"
+                            src="./projects/gamehub/bingo-dark.jpeg"
                             width={600}
                             height={400}
                             alt=""
