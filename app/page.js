@@ -171,7 +171,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-[99vw] absolute hero">
+      <div className="w-[100vw] absolute hero">
         <div className="fixed z-10 w-full">
           <Navbar />
         </div>
@@ -228,8 +228,8 @@ export default function Home() {
               <div className="text-4xl text-center py-7 w-fit mx-auto">
                 About Me
               </div>
-              <div className="w-[90%] lg:w-4/5 lg:min-h-[80vh] flex justify-around gap-5 items-center m-auto bg-gray-900 mb-12 p-5 rounded-lg flex-col lg:flex-row ">
-                <div className="h-[50vh] lg:w-[50%] lg:h-[82%] text-[20px] bg-gray-800 p-8 rounded-md overflow-y-auto">
+              <div className="w-[100%] lg:w-4/5 lg:min-h-[80vh] flex justify-around gap-5 items-center m-auto bg-gray-900 mb-12 p-5 rounded-lg flex-col lg:flex-row ">
+                <div className="h-[50vh] w-full lg:w-[50%] lg:h-[82%] text-[20px] bg-gray-800 p-8 rounded-md overflow-y-auto">
                   I am{" "}
                   <strong className="text-3xl text-[#b3f5ef] italic ">
                     {siteProps.name}
@@ -276,9 +276,7 @@ export default function Home() {
             <div className="w-[100vw]">
               <MantineProvider>
                 <div
-                  className="w-[100vw] min-h-[80vh] flex flex-col gap-8 justify-center"
-                  ref={about}
-                >
+                  className="w-[100vw] min-h-[80vh] flex flex-col gap-8 justify-center">
                   <div className="w-full text-4xl text-center py-5">
                     Portfolio
                   </div>
