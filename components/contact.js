@@ -23,10 +23,10 @@ const Contact = () => {
             <a href={`https://github.com/${Social.github}`} target="_blank">
               <Image
                 src="./github.svg"
-                alt="GitHub"
-                className="socialIcon"
                 width={30}
                 height={30}
+                alt="GitHub"
+                className="socialIcon"
               />
             </a>
           )}

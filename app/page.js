@@ -28,7 +28,7 @@ export default function Home() {
 
   let languages = skills.Languages;
   let skill = skills.skill;
-  var finalpath = `0 50 Q ${window.innerWidth / 2} 50 ${window.innerWidth} 50`;
+  const [finalpath, setFinalpath] = useState( `M 20 50 Q 600 50 1200 50`)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +36,10 @@ export default function Home() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
+    console.log(window.innerWidth)
+    setFinalpath(`M 20 50 Q ${window.innerWidth / 2} 50 ${window.innerWidth - 20} 50`);
+    console.log(finalpath)
+    
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -276,7 +279,7 @@ export default function Home() {
                     if (skill[keyy]) {
                       return (
                         <>
-                          <div key={value}>
+                          <div key={keyy}>
                             <Image
                               className="skillLogo"
                               src={`logos/${keyy.toLowerCase()}.svg`}
