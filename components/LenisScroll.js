@@ -7,10 +7,6 @@ const LenisScroll = () => {
     useEffect(() => {
         const lenis = new Lenis()
         
-        lenis.on('scroll', (e,any) => {
-            console.log('scroll', e, any)
-        })
-
         function raf(time) {
             lenis.raf(time)
             requestAnimationFrame(raf)

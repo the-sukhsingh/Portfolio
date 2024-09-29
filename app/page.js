@@ -28,6 +28,7 @@ export default function Home() {
 
   let languages = skills.Languages;
   let skill = skills.skill;
+  var finalpath = `0 50 Q ${window.innerWidth / 2} 50 ${window.innerWidth} 50`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -221,7 +222,32 @@ export default function Home() {
             </div>
           </>
         </div>
-        <div className="partition"></div>
+        <div
+          className="partition"
+          style={{ width: "100%" }}
+          onMouseMove={(dets) => {
+            var x = dets.clientX;
+            var rect = dets.target.getBoundingClientRect();
+            var y = dets.clientY - rect.top;
+            var path = `M 20 50 Q ${x} ${y} ${window.innerWidth-20} 50`;
+            gsap.to("#part1", {
+              duration: 0.2,
+              attr: { d: path },
+              ease: "power3.out",
+            });
+          }}
+          onMouseLeave={() => {
+            gsap.to("#part1", {
+              attr: { d: finalpath },
+              duration: 1.5,
+              ease: "elastic.out(1,0.2)",
+            });
+          }}
+        >
+          <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+            <path id="part1" d={finalpath} stroke="white" fill="transparent" />
+          </svg>
+        </div>
         <div id="about">
           <>
             <div ref={about}>
@@ -270,7 +296,32 @@ export default function Home() {
             </div>
           </>
         </div>
-        <div className="partition"></div>
+        <div
+          className="partition"
+          style={{ width: "100%" }}
+          onMouseMove={(dets) => {
+            var x = dets.clientX;
+            var rect = dets.target.getBoundingClientRect();
+            var y = dets.clientY - rect.top;
+            var path = `M 20 50 Q ${x} ${y} ${window.innerWidth-20} 50`;
+            gsap.to("#part2", {
+              duration: 0.2,
+              attr: { d: path },
+              ease: "power3.out",
+            });
+          }}
+          onMouseLeave={() => {
+            gsap.to("#part2", {
+              attr: { d: finalpath },
+              duration: 1.5,
+              ease: "elastic.out(1,0.2)",
+            });
+          }}
+        >
+          <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+            <path id="part2" d={finalpath} stroke="white" fill="transparent" />
+          </svg>
+        </div>
         <div id="portfolio">
           <>
             <div className="w-[100vw]">
@@ -515,8 +566,32 @@ export default function Home() {
             </div>
           </>
         </div>
-        <div className="partition"></div>
-        <div id="contact">
+        <div
+          className="partition"
+          style={{ width: "100%" }}
+          onMouseMove={(dets) => {
+            var x = dets.clientX;
+            var rect = dets.target.getBoundingClientRect();
+            var y = dets.clientY - rect.top;
+            var path = `M 20 50 Q ${x} ${y} ${window.innerWidth-20} 50`;
+            gsap.to("#part3", {
+              duration: 0.2,
+              attr: { d: path },
+              ease: "power3.out",
+            });
+          }}
+          onMouseLeave={() => {
+            gsap.to("#part3", {
+              attr: { d: finalpath },
+              duration: 1.5,
+              ease: "elastic.out(1,0.2)",
+            });
+          }}
+        >
+          <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
+            <path id="part3" d={finalpath} stroke="white" fill="transparent" />
+          </svg>
+        </div>        <div id="contact">
           <Contact />
         </div>
 
