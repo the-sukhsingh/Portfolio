@@ -155,9 +155,6 @@ body {
 
 .socialIcon:hover{
   transform: scale(1.05);
-  background-color: blue;
-  /* background-blend-mode: difference; */
-  mix-blend-mode: difference;
 }
 
 .socialIcon:active{
@@ -250,4 +247,8 @@ html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+.leftt:hover{
+  transform: translateX(-10px);
 }

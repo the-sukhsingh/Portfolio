@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import Navbar from "@/components/navbar";
 import Contact from "@/components/contact";
+import Cyl from "@/components/Cyl";
 
 import { MantineProvider } from "@mantine/core";
 import "@mantine/carousel/styles.css";
@@ -28,7 +29,7 @@ export default function Home() {
 
   let languages = skills.Languages;
   let skill = skills.skill;
-  const [finalpath, setFinalpath] = useState( `M 20 50 Q 600 50 1200 50`)
+  const [finalpath, setFinalpath] = useState(`M 20 50 Q 600 50 1200 50`);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,17 +37,18 @@ export default function Home() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    console.log(window.innerWidth)
-    setFinalpath(`M 20 50 Q ${window.innerWidth / 2} 50 ${window.innerWidth - 20} 50`);
-    console.log(finalpath)
-    
+
+    setFinalpath(
+      `M 20 50 Q ${window.innerWidth / 2} 50 ${window.innerWidth - 20} 50`
+    );
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Animate home section on scroll trigger
   useGSAP(() => {
+    // Animate home section on scroll trigger
     gsap.fromTo(
       home.current,
       { opacity: 1 },
@@ -61,10 +63,7 @@ export default function Home() {
         },
       }
     );
-  });
-
-  // Animate about section on scroll trigger
-  useGSAP(() => {
+    // Animate about section on scroll trigger
     gsap.fromTo(
       "#about",
       { opacity: 0 },
@@ -79,9 +78,7 @@ export default function Home() {
         },
       }
     );
-  });
-  // Animate About section on scroll trigger
-  useGSAP(() => {
+    // Animate About section on scroll trigger
     gsap.fromTo(
       about.current,
       { opacity: 1 },
@@ -96,10 +93,7 @@ export default function Home() {
         },
       }
     );
-  });
-
-  // Animate Portfolio section on scroll trigger
-  useGSAP(() => {
+    // Animate Portfolio section on scroll trigger
     gsap.fromTo(
       "#portfolio",
       { opacity: 0 },
@@ -114,10 +108,7 @@ export default function Home() {
         },
       }
     );
-  });
-
-  // Animate Left Project section on scroll trigger
-  useGSAP(() => {
+    // Animate Left Project section on scroll trigger
     gsap.fromTo(
       ".leftt",
       { x: -1000, opacity: 0 },
@@ -133,10 +124,7 @@ export default function Home() {
         },
       }
     );
-  });
-
-  // Animate Center section on scroll trigger
-  useGSAP(() => {
+    // Animate Center section on scroll trigger
     gsap.fromTo(
       ".midd",
       { y: 200, opacity: 0 },
@@ -152,10 +140,7 @@ export default function Home() {
         },
       }
     );
-  });
-
-  // Animate Right section on scroll trigger
-  useGSAP(() => {
+    // Animate Right section on scroll trigger
     gsap.fromTo(
       ".rightt",
       { x: 1000, opacity: 0 },
@@ -206,16 +191,16 @@ export default function Home() {
                 </p>
                 <div className="flex gap-5">
                   <a href={"https://github.com/" + Social.github}>
-                    <Image src="./github.svg" alt="" width={45} height={45} />
+                    <Image src="/github.svg" alt="" width={45} height={45} />
                   </a>
                   <a href={"https://linkedin.com/in/" + Social.linkedin}>
-                    <Image src="./linkedin.svg" alt="" width={45} height={45} />
+                    <Image src="/linkedin.svg" alt="" width={45} height={45} />
                   </a>
                 </div>
               </div>
               <div className="w-2/5 hidden lg:block photo">
                 <Image
-                  src="./icon.jpeg"
+                  src="/icon.jpeg"
                   alt="A sikh guy coding"
                   className="cover"
                   width={600}
@@ -232,7 +217,7 @@ export default function Home() {
             var x = dets.clientX;
             var rect = dets.target.getBoundingClientRect();
             var y = dets.clientY - rect.top;
-            var path = `M 20 50 Q ${x} ${y} ${window.innerWidth-20} 50`;
+            var path = `M 20 50 Q ${x} ${y} ${window.innerWidth - 20} 50`;
             gsap.to("#part1", {
               duration: 0.2,
               attr: { d: path },
@@ -286,9 +271,8 @@ export default function Home() {
                               width={100}
                               height={100}
                               alt=""
-                              title={keyy[0].toUpperCase()+keyy.substring(1)}
+                              title={keyy[0].toUpperCase() + keyy.substring(1)}
                             />
-
                           </div>
                         </>
                       );
@@ -306,7 +290,7 @@ export default function Home() {
             var x = dets.clientX;
             var rect = dets.target.getBoundingClientRect();
             var y = dets.clientY - rect.top;
-            var path = `M 20 50 Q ${x} ${y} ${window.innerWidth-20} 50`;
+            var path = `M 20 50 Q ${x} ${y} ${window.innerWidth - 20} 50`;
             gsap.to("#part2", {
               duration: 0.2,
               attr: { d: path },
@@ -329,17 +313,18 @@ export default function Home() {
           <>
             <div className="w-[100vw]">
               <MantineProvider>
-                <div
-                  className="w-[100vw] min-h-[80vh] flex flex-col gap-8 justify-center">
+                <div className="w-[100vw] min-h-[80vh] flex flex-col gap-8 justify-center">
                   <div className="w-full text-4xl text-center py-5">
                     Portfolio
                   </div>
-
+                  <div className="m-0 p-0">
+                    <Cyl />
+                  </div>
                   <div className="w-[100vw] flex justify-around flex-col md:flex-row flex-wrap gap-2 overflow-x-hidden ">
                     <div className="w-full md:w-1/2 lg:w-[30%]  relative border rounded-lg p-3 leftt">
                       <div className="absolute top-2 right-2 z-10 bg-black p-2 rounded-xl cursor-pointer">
                         <Image
-                          src="./share.svg"
+                          src="/share.svg"
                           width={30}
                           height={30}
                           alt="Share"
@@ -353,7 +338,7 @@ export default function Home() {
                           }}
                         />
                         <Image
-                          src="./github.svg"
+                          src="/github.svg"
                           width={30}
                           height={30}
                           className="hover:scale-105 active:scale-95"
@@ -369,7 +354,7 @@ export default function Home() {
                       <Carousel withIndicators loop>
                         <CarouselSlide>
                           <Image
-                            src="./projects/todo/todo-web.jpeg"
+                            src="/projects/todo/todo-web.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -383,7 +368,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="./projects/todo/todo-mobile.jpeg"
+                            src="/projects/todo/todo-mobile.jpeg"
                             width={100}
                             height={200}
                             alt=""
@@ -402,7 +387,7 @@ export default function Home() {
                     <div className="w-full md:w-1/2 lg:w-[30%]  relative border rounded-lg p-3 midd">
                       <div className="absolute top-2 right-2 z-10 bg-black p-2 rounded-xl cursor-pointer">
                         <Image
-                          src="./share.svg"
+                          src="/share.svg"
                           width={30}
                           height={30}
                           alt="Share"
@@ -415,7 +400,7 @@ export default function Home() {
                           }}
                         />
                         <Image
-                          src="./github.svg"
+                          src="/github.svg"
                           width={30}
                           height={30}
                           alt="Github"
@@ -431,7 +416,7 @@ export default function Home() {
                       <Carousel withIndicators loop>
                         <CarouselSlide>
                           <Image
-                            src="./projects/passop/passop-web.jpeg"
+                            src="/projects/passop/passop-web.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -445,7 +430,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="./projects/passop/passop-mobile.jpeg"
+                            src="/projects/passop/passop-mobile.jpeg"
                             width={100}
                             height={200}
                             alt=""
@@ -464,7 +449,7 @@ export default function Home() {
                     <div className="w-full md:w-1/2 lg:w-[30%]  relative border rounded-lg p-3 rightt">
                       <div className="absolute top-2 right-2 z-10 bg-black p-2 rounded-xl cursor-pointer">
                         <Image
-                          src="./share.svg"
+                          src="/share.svg"
                           width={30}
                           height={30}
                           className="hover:scale-105 active:scale-95"
@@ -478,7 +463,7 @@ export default function Home() {
                           }}
                         />
                         <Image
-                          src="./github.svg"
+                          src="/github.svg"
                           width={30}
                           height={30}
                           alt="Github"
@@ -494,7 +479,7 @@ export default function Home() {
                       <Carousel withIndicators loop>
                         <CarouselSlide>
                           <Image
-                            src="./projects/gamehub/gamehub-home.jpeg"
+                            src="/projects/gamehub/gamehub-home.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -508,7 +493,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="./projects/gamehub/tic-light.jpeg"
+                            src="/projects/gamehub/tic-light.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -521,7 +506,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="./projects/gamehub/tic-dark.jpeg"
+                            src="/projects/gamehub/tic-dark.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -534,7 +519,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="./projects/gamehub/bingo-light.jpeg"
+                            src="/projects/gamehub/bingo-light.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -547,7 +532,7 @@ export default function Home() {
                         </CarouselSlide>
                         <CarouselSlide>
                           <Image
-                            src="./projects/gamehub/bingo-dark.jpeg"
+                            src="/projects/gamehub/bingo-dark.jpeg"
                             width={600}
                             height={400}
                             alt=""
@@ -576,7 +561,7 @@ export default function Home() {
             var x = dets.clientX;
             var rect = dets.target.getBoundingClientRect();
             var y = dets.clientY - rect.top;
-            var path = `M 20 50 Q ${x} ${y} ${window.innerWidth-20} 50`;
+            var path = `M 20 50 Q ${x} ${y} ${window.innerWidth - 20} 50`;
             gsap.to("#part3", {
               duration: 0.2,
               attr: { d: path },
@@ -594,7 +579,8 @@ export default function Home() {
           <svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">
             <path id="part3" d={finalpath} stroke="white" fill="transparent" />
           </svg>
-        </div>        <div id="contact">
+        </div>
+        <div id="contact">
           <Contact />
         </div>
 
